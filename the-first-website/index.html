@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой первый сайт</title>
+    <link rel="shortcut icon" href="html-logo.svg" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .first-rectangle {
+            position: relative;
+            width: 460px;
+            height: 120px;
+            background-color: rgb(65, 65, 65);
+
+        }
+        
+        .text-inside {
+            position: absolute;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .purple-text {
+            color: #800080; 
+        }
+        
+        .orange-square {
+            position: absolute;
+            bottom: 0px;
+            width: 100px;
+            height: 100px;
+            background-color: #b80834;
+        }
+        
+        .second-rectangle {
+            width: 300px;
+            background-color: #d200cb;
+        }
+        
+        .vertical-elements {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 15px 10px;
+        }
+        
+        .element {
+            position: relative;
+            background-color: #8d027a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="first-rectangle">
+        <div class="text-inside">
+            Всем привет, сегодня я создаю свой <span class="purple-text">первый сайт!</span>
+        </div>
+        <div class="orange-square"></div>
+    </div>
+    
+    <div class="second-rectangle">
+        <div>А здесь какие то элементы:</div>
+        
+        <div class="vertical-elements">
+            <div class="element">Элемент Элемент Элемент Элемент</div>
+            <span class="element">Элемент Элемент Элемент Элемент</span>
+            <span class="element">Элемент Элемент Элемент Элемент</span>
+        </div>
+    </div>
+</body>
+</html>
