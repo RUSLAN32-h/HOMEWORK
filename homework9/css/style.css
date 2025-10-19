@@ -1,0 +1,33 @@
+body {
+
+  min-height: 200vh; /* Добавляем высоту для демонстрации скролла */
+  font-family: Arial, sans-serif;
+  background: #262628;
+  color: #fff;
+  font-size: 31px;
+}
+
+.content {
+}
+
+/* Прямоугольник */
+.rectangle {
+  position: fixed;
+  left: 50%; /* Левая граница на 50% */
+  right: 50px; /* Правая граница с отступом 50px */
+  bottom: 100px; /* Нижняя граница с отступом 100px */
+  height: 100px; /* Высота 100px */
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* Круг */
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  top: -50px; /* Половина высоты круга, чтобы он выступал сверху */
+  right: 466px; /* Половина ширины круга, чтобы он выступал справа */
+}
