@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 200px;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: #727272;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.square:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Прогресс-бар над квадратом */
+.progress-bar {
+  position: absolute;
+  top: -40px;
+  left: -50%;
+  width: 0%;
+  height: 20px;
+  background-color: white;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: width 2s ease; 
+  z-index: 3;
+}
+
+.container:hover .progress-bar {
+  width: 200%;
+  left: -50%;
+  transition: width 2s linear;
+}
+
+.square::after {
+  content: "Успех!";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 255, 85);
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease 1.7s;
+  z-index: 1;
+}
+
+.container:hover .square::after {
+  opacity: 1;
+}
