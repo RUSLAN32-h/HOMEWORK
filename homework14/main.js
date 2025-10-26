@@ -76,8 +76,9 @@ let Users = 0;
 
 for (let i = 0; i < users.length; i++) {
   if (!users[i].isAdmin) {
-    UsersCount++;
+    Users++;
   }
 }
 
 console.log("Количество простых пользователей: " + Users);
+
