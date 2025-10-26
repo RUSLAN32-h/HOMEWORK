@@ -72,13 +72,14 @@ const users = [
   }
 ];
 
-let Users = 0;
+let  UsersCount = 0;
 
 for (let i = 0; i < users.length; i++) {
   if (!users[i].isAdmin) {
-    Users++;
+     UsersCount++;
   }
 }
 
-console.log("Количество простых пользователей: " + Users);
+console.log("Количество простых пользователей: " +  UsersCount);
+
 
