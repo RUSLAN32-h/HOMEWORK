@@ -1,17 +1,28 @@
-(function () {
-  document.addEventListener("click", burgerInit);
+(function() {
+    
+    document.addEventListener('click', function(e) {
+        if ((e.target.closest('.burger-icon') || e.target.closest('.nav__link')) && 
+            document.documentElement.clientWidth <= 900) {
+            document.body.classList.toggle('body--opened-menu')
+        }
 
-  function burgerInit(e) {
-    const burgerIcon = e.target.closest(".burger-icon");
-    const burgerNavLink = e.target.closest(".nav__link");
+        if (e.target.closest('.about__img-button')) {
+            document.querySelector('.modal').classList.add('modal--opened')
+            document.body.classList.add('body--opened-modal')
+        }
 
-    if (!burgerIcon && !burgerNavLink) return;
-    if (document.documentElement.clientWidth > 900) return;
+        if (e.target.closest('.modal__cancel') || 
+            (e.target.closest('.modal') && e.target === e.target.closest('.modal'))) {
+            document.querySelector('.modal').classList.remove('modal--opened')
+            document.body.classList.remove('body--opened-modal')
+        }
+    })
 
-    if (!document.body.classList.contains("body--opened-menu")) {
-      document.body.classList.add("body--opened-menu");
-    } else {
-      document.body.classList.remove("body--opened-menu");
-    }
-  }
-})();
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            document.querySelector('.modal').classList.remove('modal--opened')
+            document.body.classList.remove('body--opened-modal')
+        }
+    })
+
+})()
